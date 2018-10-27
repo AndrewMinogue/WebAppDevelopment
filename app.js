@@ -44,7 +44,6 @@ app.put('/pizzas/:id',pizzas.editPizza);
 app.put('/pizzadeal/:id/rating', pizzadeal.incrementDealRating);
 app.put('/pizzadeal/:id',pizzadeal.editPizzaDeal);
 
-
 app.delete('/pizzas/:id', pizzas.deletePizza);
 app.delete('/pizzadeal/:id', pizzadeal.DeletePizzaDeal);
 
