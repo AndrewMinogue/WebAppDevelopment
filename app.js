@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 
 const pizzas = require("./routes/pizzas");
 const pizzadeal = require("./routes/pizzadeal")
+const user = require("./routes/users")
 
 
 var app = express();
@@ -28,6 +29,8 @@ app.use('/users', usersRouter);
 
 app.post('/pizzas',pizzas.addPizza);
 app.post('/pizzadeal',pizzadeal.addPizzaDeal);
+app.post('/users',user.Register);
+app.post('/login',user.Authenticate);
 
 app.get('/pizzas', pizzas.findAll);
 app.get('/pizzadeal', pizzadeal.findAllDeals);
